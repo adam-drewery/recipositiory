@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipository.Api", "Recipository.Api\Recipository.Api.csproj", "{037B3BA4-A92C-4D9F-889A-4D24B5B58BFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipository.Domain", "Recipository.Domain\Recipository.Domain.csproj", "{90DA02B0-6C43-4763-A3B7-2AE5C7343624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipository.Entities", "Recipository.Entities\Recipository.Entities.csproj", "{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{037B3BA4-A92C-4D9F-889A-4D24B5B58BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037B3BA4-A92C-4D9F-889A-4D24B5B58BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037B3BA4-A92C-4D9F-889A-4D24B5B58BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037B3BA4-A92C-4D9F-889A-4D24B5B58BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DA02B0-6C43-4763-A3B7-2AE5C7343624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DA02B0-6C43-4763-A3B7-2AE5C7343624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DA02B0-6C43-4763-A3B7-2AE5C7343624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DA02B0-6C43-4763-A3B7-2AE5C7343624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
