@@ -29,3 +29,4 @@ The project structure is as follows:
 - Identity Server: Its set up but I ran out of time so there are no users or roles. The API client also has no functionality for authenticating.
 - Validation: None of the models or entities are validated. For this I'd probably use [FluentValidation](https://fluentvalidation.net/) and [ASP.NET Core Model Validation](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-3.1) (they work well together).
 - Exception handling: Generally I find it useful to catch certain exceptions (like a ValidationException, and return a custom response to the client).
+- Some sort of front-end: at least to test the API client library.
