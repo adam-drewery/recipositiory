@@ -22,4 +22,10 @@ The project structure is as follows:
 - To maintain a historical record of recipes, each update is saved as a new recipe, with a reference to the recipe it is based on.
 - Entities with the `IAuditable` interface automatically have their CreatedDate set when saving (the DbContext handles this).
 - I generated the documentation with Swagger. Its my first time using it actually, i followed [this guide](https://www.meziantou.net/how-to-document-an-asp-net-core-web-api-using-openapi-specification-swagger.htm)
+- I considered using NSwag to generate client libraries but I haven't used it before so went with the safer option of manually writing it.
 
+#### Things I didn't have time to finish
+
+- Identity Server: Its set up but I ran out of time so there are no users or roles. The API client also has no functionality for authenticating.
+- Validation: None of the models or entities are validated. For this I'd probably use [FluentValidation](https://fluentvalidation.net/) and [ASP.NET Core Model Validation](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-3.1) (they work well together).
+- Exception handling: Generally I find it useful to catch certain exceptions (like a ValidationException, and return a custom response to the client).

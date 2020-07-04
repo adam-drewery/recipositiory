@@ -11,22 +11,14 @@ using Xunit;
 
 namespace Recipository.Api.Tests
 {
-	public class RecipesControllerTests
+	public class RecipesControllerTests : ControllerTests
 	{
+		protected RecipesController Controller { get; }
+
 		public RecipesControllerTests()
 		{
-			var connection = new SqliteConnection("DataSource=:memory:");
-			connection.Open();
-
-			var option = new DbContextOptionsBuilder<RecipositoryDbContext>().UseSqlite(connection).Options;
-			DbContext = new RecipositoryDbContext(option);
-			DbContext.Database.EnsureCreated();
 			Controller = new RecipesController(DbContext);
 		}
-
-		protected RecipositoryDbContext DbContext { get; }
-
-		protected RecipesController Controller { get; }
 
 		public class Get : RecipesControllerTests
 		{
@@ -62,7 +54,7 @@ namespace Recipository.Api.Tests
 				recipeModel.Name += " (improved version)";
 
 				// Improve this recipe with CHEESE.
-				var cheese = new IngredientModel {Amount = 500, Unit = Unit.Grams, IngredientId = 2};
+				var cheese = new IngredientAmountModel {Amount = 500, Unit = Unit.Grams, IngredientId = 2};
 				recipeModel.Ingredients.Add(cheese);
 				Controller.Post(recipeModel);
 

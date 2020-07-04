@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Recipository.Entities;
 
 namespace Recipository.Api
 {
@@ -27,6 +30,10 @@ namespace Recipository.Api
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddDbContext<RecipositoryDbContext>(options => options.UseSqlite("Data Source=Recipes.db"));
+			services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+				.AddEntityFrameworkStores<RecipositoryDbContext>();
+
 			// Configure Swagger
 			services.AddSwaggerGen(c =>
 			{
@@ -43,6 +50,11 @@ namespace Recipository.Api
 			});
 
 			services.AddControllers();
+
+			using (var dbContext = services.BuildServiceProvider().GetService<RecipositoryDbContext>())
+			{
+				dbContext.Database.EnsureCreated();
+			}
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +70,7 @@ namespace Recipository.Api
 			app.UseAuthorization();
 			app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
+			app.UseAuthentication();
 			app.UseSwagger();
 			app.UseSwaggerUI(c =>
 			{

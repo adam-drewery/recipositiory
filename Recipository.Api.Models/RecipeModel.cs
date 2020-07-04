@@ -11,7 +11,7 @@ namespace Recipository.Api.Models
 
 		public string Name { get; set; }
 
-		public ICollection<IngredientModel> Ingredients { get; set; } = new List<IngredientModel>();
+		public ICollection<IngredientAmountModel> Ingredients { get; set; } = new List<IngredientAmountModel>();
 
 		public static Expression<Func<Recipe, RecipeModel>> FromRecipe { get; } = recipe =>
 			new RecipeModel
