@@ -6,4 +6,9 @@ namespace Recipository.Domain
 	{
 		int Id { get; set; }
 	}
+
+	public interface IAuditable
+	{
+		DateTime CreatedDate { get; set; }
+	}
 }

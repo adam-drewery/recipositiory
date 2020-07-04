@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Recipository.Domain
 {
-	public class Recipe : IEntity, INamed
+	public class Recipe : IEntity, INamed, IAuditable
 	{
 		public Recipe(string name) => Name = name;
 
@@ -21,5 +21,7 @@ namespace Recipository.Domain
 		public Country CountryOfOrigin { get; set; }
 
 		public ICollection<IngredientQuantity> Ingredients { get; } = new HashSet<IngredientQuantity>();
+
+		public DateTime CreatedDate { get; set; }
 	}
 }
