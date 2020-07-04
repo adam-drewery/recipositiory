@@ -8,24 +8,8 @@ namespace Recipository.Entities.Configurations
 	{
 		private static readonly Recipe[] Defaults =
 		{
-			new Recipe("Cheesy beans on toast")
-			{
-				Ingredients =
-				{
-					new IngredientQuantity(1, Quantity.Slices(2)),
-					new IngredientQuantity(2, Quantity.Ounces(3)),
-					new IngredientQuantity(3, Quantity.Grams(410)),
-				}
-			},
-
-			new Recipe("Chicken Kiev")
-			{
-				Ingredients =
-				{
-					new IngredientQuantity(4, Quantity.Chunks(1)),
-					new IngredientQuantity(5, Quantity.Cloves(2)),
-				}
-			},
+			new Recipe(1, "Cheesy beans on toast"),
+			new Recipe(2, "Chicken Kiev")
 		};
 
 		public void Configure(EntityTypeBuilder<Recipe> builder)

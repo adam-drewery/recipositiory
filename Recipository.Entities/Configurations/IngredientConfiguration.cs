@@ -4,7 +4,7 @@ using Recipository.Domain;
 
 namespace Recipository.Entities.Configurations
 {
-	public class IngredientsConfiguration : IEntityTypeConfiguration<Ingredient>
+	public class IngredientConfiguration : IEntityTypeConfiguration<Ingredient>
 	{
 		private static readonly Ingredient[] Defaults =
 		{

@@ -15,3 +15,4 @@ The project structure is as follows:
 - I decided to use `Serilog` instead of `Microsoft.Extensions.Logging` because it has more features such as destructuring. I also chose not to DI my loggers because from my experience logging console output in tests can be useful.
 - I applied some simple domain-oriented interfaces such as `INamed" so in future I can write extension methods for any entity or collections of entities that have that interface.  
 - To seed the initial list of countries I used a library I wrote and published at my last job: `Audacia.Locality`.
+- Tests are written using xUnit and FluentAssertions, and follow the structure described in this [blog post by Phil Haack](https://haacked.com/archive/2012/01/02/structuring-unit-tests.aspx/).
