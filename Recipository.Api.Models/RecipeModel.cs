@@ -31,6 +31,10 @@ namespace Recipository.Api.Models
 				recipe.Ingredients.Add(ingredient);
 			}
 
+			// Set this to be a new recipe, who's parent is the recipe it is based on.
+			recipe.ParentId = recipe.Id;
+			recipe.Id = 0;
+
 			return recipe;
 		}
 	}

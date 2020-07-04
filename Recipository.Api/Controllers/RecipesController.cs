@@ -24,10 +24,6 @@ namespace Recipository.Api.Controllers
 		{
 			var recipe = model.ToRecipe();
 
-			//
-			recipe.ParentId = recipe.Id;
-			recipe.Id = 0;
-
 			DbContext.Recipes.Add(recipe);
 			await DbContext.SaveChangesAsync();
 		}
