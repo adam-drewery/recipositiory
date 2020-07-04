@@ -13,6 +13,8 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipository.Api.Client", "Recipository.Api.Client\Recipository.Api.Client.csproj", "{938B5BB4-D0E3-4D5F-8BA5-EF3A41C76323}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D78DD35-9EA3-4221-87CE-E8123BFEB5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938B5BB4-D0E3-4D5F-8BA5-EF3A41C76323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938B5BB4-D0E3-4D5F-8BA5-EF3A41C76323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938B5BB4-D0E3-4D5F-8BA5-EF3A41C76323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938B5BB4-D0E3-4D5F-8BA5-EF3A41C76323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

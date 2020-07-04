@@ -4,6 +4,9 @@ namespace Recipository.Domain
 	{
 		Grams,
 		Ounces,
-		Tablespoons
+		Tablespoons,
+		Slices,
+		Chunks,
+		Cloves
 	}
 }
