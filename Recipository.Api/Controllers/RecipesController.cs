@@ -18,5 +18,19 @@ namespace Recipository.Api.Controllers
 		{
 			return DbContext.Recipes.Select(RecipeModel.FromRecipe);
 		}
+
+		[HttpGet]
+		public async Task Post(RecipeModel model)
+		{
+			var recipe = model.ToRecipe();
+
+			//
+			recipe.ParentId = recipe.Id;
+			recipe.Id = 0;
+
+			DbContext.Recipes.Add(recipe);
+			await DbContext.SaveChangesAsync();
+		}
 	}
+
 }

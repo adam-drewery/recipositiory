@@ -11,6 +11,11 @@ namespace Recipository.Domain
 
 		public int Id { get; set; }
 
+		/// <summary>The ID of the recipe that this one is derived from.</summary>
+		public int? ParentId { get; set; }
+
+		public int? CountryOfOriginId { get; set; }
+
 		public string Name { get; set; }
 
 		public Country CountryOfOrigin { get; set; }

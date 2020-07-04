@@ -16,3 +16,4 @@ The project structure is as follows:
 - I applied some simple domain-oriented interfaces such as `INamed" so in future I can write extension methods for any entity or collections of entities that have that interface.  
 - To seed the initial list of countries I used a library I wrote and published at my last job: `Audacia.Locality`.
 - Tests are written using xUnit and FluentAssertions, and follow the structure described in this [blog post by Phil Haack](https://haacked.com/archive/2012/01/02/structuring-unit-tests.aspx/).
+- To maintain a historical record of recipes, each update is saved as a new recipe, with a reference to the recipe it is based on.
