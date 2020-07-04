@@ -5,8 +5,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Audacia.Locality" Version="1.1.55180.19352" />
+	  <PackageReference Include="Audacia.Random" Version="3.1.20120.2" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Recipository.Domain\Recipository.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

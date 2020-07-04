@@ -9,3 +9,6 @@ The project structure is as follows:
 - *Api*: ASP.NET WebAPI stuff.
 - *Entities*: Entity Framework Repositories. (I would have called it repositories if it didn't sound so similar to the parent solution).  
 
+#### Design Decisions
+
+- I chose to back my repositories with SQLite because I developed this on linux and I don't have SQL Server set up.
