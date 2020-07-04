@@ -5,6 +5,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Recipository.Api.Models\Recipository.Api.Models.csproj" />
 	  <ProjectReference Include="..\Recipository.Entities\Recipository.Entities.csproj" />
 	</ItemGroup>
 

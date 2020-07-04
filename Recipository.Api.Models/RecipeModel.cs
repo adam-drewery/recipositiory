@@ -34,13 +34,4 @@ namespace Recipository.Api.Models
 			return recipe;
 		}
 	}
-
-	public class IngredientModel
-	{
-		public int IngredientId { get; set; }
-
-		public int Amount { get; set; }
-
-		public Unit Unit { get; set; }
-	}
 }
