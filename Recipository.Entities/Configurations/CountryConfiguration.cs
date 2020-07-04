@@ -8,15 +8,22 @@ namespace Recipository.Entities.Configurations
 {
 	public class CountryConfiguration : IEntityTypeConfiguration<Country>
 	{
-		public void Configure(EntityTypeBuilder<Country> builder)
+		public static Country[] Defaults { get; } = GetDefaults();
+
+		private static Country[] GetDefaults()
 		{
 			var id = 0;
-			var countries = World.Countries.Select(c =>
+			return World.Countries.Select(c =>
 			{
 				id++;
 				return new Country(id, c.Name);
-			});
-			builder.HasData(countries);
+			}).ToArray();
+		}
+
+		public void Configure(EntityTypeBuilder<Country> builder)
+		{
+
+			builder.HasData(Defaults);
 		}
 	}
 }
