@@ -19,7 +19,7 @@ namespace Recipository.Api.Controllers
 			return DbContext.Recipes.Select(RecipeModel.FromRecipe);
 		}
 
-		[HttpGet]
+		[HttpPost]
 		public async Task Post(RecipeModel model)
 		{
 			var recipe = model.ToRecipe();

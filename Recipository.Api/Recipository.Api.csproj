@@ -4,6 +4,14 @@
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 	</PropertyGroup>
 
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+	  <DocumentationFile>bin\Debug\Recipository.Api.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+	  <DocumentationFile>bin\Release\Recipository.Api.xml</DocumentationFile>
+	</PropertyGroup>
+
 	<ItemGroup>
 	  <ProjectReference Include="..\Recipository.Api.Models\Recipository.Api.Models.csproj" />
 	  <ProjectReference Include="..\Recipository.Entities\Recipository.Entities.csproj" />
@@ -11,6 +19,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Serilog" Version="2.9.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
 	</ItemGroup>
 
 
